@@ -1,0 +1,329 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StabiliX Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+        html{
+            width: 100vw;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+        }
+
+        /* Header Styling */
+        header {
+            align-self: auto;
+            background-color: #000000;
+    padding: 10px 0;
+    position: static;
+    top: 10;
+    z-index: 1000;
+    margin: 0px 0px 30px 0px;
+    
+        }
+
+        .container {
+            display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0 20px; */
+    padding: 0px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #ffffff;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        /* Banner Section Styling */
+        .banner {
+            background-color: #000000;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+    align-items: center;
+    align-self: center;
+        }
+        @media (max-width: 480px) {
+    
+            .banner > div > h1{
+                font-size: 2rem;
+            }
+}
+        .banner > img {
+            width: 80%;
+    align-self: center;
+    animation: float 3s ease-in-out infinite;
+    margin: -10% 0px -10% 0px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner-content h1 {
+            font-size: 3rem;
+            color: #ff6600;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin: 20px 0;
+            max-width: 600px;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 0;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #e65c00;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0px;
+            background-color: #000000;
+            text-align: center;
+            /* border-bottom: 1px solid #ff6600; */
+        }
+
+
+        .section * {
+            max-width: 500px;
+        }
+
+        .section h2 {
+            margin: 0 auto;
+            font-size: 2.5rem;
+            color: #ff6600;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.65rem;
+            color: #ddd;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .application-item {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin: 10px auto;
+            padding: 15px 20px;
+            background-color: #1a1a1a;
+            border: 1px solid #ff6600;
+            max-width: 600px;
+            font-weight: 600;
+        }
+
+        /* About Us Section Styling for Side-by-Side Layout */
+        .about-content {
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    max-width: 70%;
+    margin: 0 auto;
+        }
+        @media (max-width:680px){
+            .about-content{
+                flex-direction: column;
+            }
+        }
+        @media (max-width:500px){
+            .about-content{
+                margin-bottom: -40%;
+                flex-direction: column;
+            }
+        }
+
+        .about-text {
+            flex: 1 1 45%;
+            padding: 20px;
+            color: #ddd;
+            max-width: 500px;
+        }
+
+        .about-animation {
+            flex: 1 1 45%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        /* Consistent Image and Animation Styling */
+        .content-media {
+            /* width: 100%; */
+            max-width: 80%;
+            margin: 20px auto;
+            height: auto;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-left {
+            text-align: left;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-right img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+               <a href="#hero-logo"><img  src="stabilix Logo.png" alt="StabiliX Logo"></a> 
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#market-analysis">SWOT</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section class="banner">
+        <img id="hero-logo" src="StabiliX.png" alt="StabiliX Bike">
+        <div class="banner-content">
+            <h1>Stay Steady, Move Smart</h1>
+            <p>Transforming personal mobility with cutting-edge self-balancing technology.</p>
+            <a href="#contact" class="cta-btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>ABOUT US</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>We are an innovative startup focused on transforming personal mobility with cutting-edge self-balancing technology. Our flagship product, a self-balancing electric vehicle, leverages advanced gyroscopic control and real-time balancing algorithms to deliver a safe, stable, and efficient riding experience. We address key challenges in urban commuting such as rider safety, balance, and ease of use, redefining personal transportation with smarter, safer, and more sustainable solutions.</p>
+            </div>
+            <div class="about-animation" id="about-animation"></div>
+        </div>
+    </section>
+
+    <!-- What We Are Solving Section -->
+    <section class="section">
+        <h2>What We Are Solving?</h2>
+        <img src="problem_solution.png" alt="Problem and Solution Analysis" class="content-media">
+    </section>
+
+    <!-- Market Analysis Section -->
+    <section id="market-analysis" class="section">
+        <h2>Market Analysis</h2>
+        <img src="swot analysis.png" alt="SWOT Analysis" class="content-media class-media__2">
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdon3OVPR_Hk20psR6lFaA1QZ6RPzfWxIpfI9aGni_WZ7d1sQ/viewform?embedded=true" width="640" height="990" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>   
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <p>Powered by StabiliX</p>
+            <p>All Rights Reserved © 2024</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://instagram.com"><img src="rb_2227.png" style="scale: 1.45;" alt="Instagram"></a>
+            <a href="https://whatsapp.com"><img src="whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </footer>
+
+    <!-- Lottie Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    <script>
+        // Load Lottie animation
+        lottie.loadAnimation({
+            container: document.getElementById('about-animation'), // the DOM element to render the animation
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'Animation - 1728497407280.json' // path to the animation JSON file
+        });
+    </script>
+</body>
+</html>
